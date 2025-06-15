@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: url("../images/background4.png") no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background: linear-gradient(135deg, #25e7e2, #109ca0);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    padding: 40px;
+    border-radius: 30px 30px 30px 30px;
+    width: 400px;
+    margin-right: 80px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #04293A;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 6px;
+    color: #04293A;
+    font-weight: bold;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-sizing: border-box; /* ✅ FIXES OVERFLOW */
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #04293A;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.login-container button:hover {
+    background-color: #064663;
+}
+
+.login-container .links {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-container .links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+/* function icon show password */
+
+.password-wrapper {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 40px;
+    box-sizing: border-box; /* ✅ FIXES OVERFLOW */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 40%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #04293A;
+}
+
+/* */

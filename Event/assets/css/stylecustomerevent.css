@@ -1,0 +1,278 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #c2edf3, #c2edf3);
+  color: #04293A;
+}
+
+/* HEADER */
+header {
+  background-color: #04293A;
+  color: white;
+  text-align: center;
+  padding: 10px 10px;
+}
+
+header h1 {
+  font-size: 2.4em;
+}
+
+/* NAVIGATION */
+nav {
+  background-color: #064663;
+  padding: 1px 25px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 10px 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+nav a:hover {
+  background-color: #0a5b85;
+}
+
+/* MAIN SECTION */
+.main-grid {
+  flex: 1;
+  padding: 50px 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+section {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 5200px;
+  margin: 0 auto;
+}
+
+/* EVENT CARD STYLING */
+.event-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: #f9fcff;
+  border: 5px solid #e0f4f8;
+  padding: 10px 10px;
+  margin-bottom: 20px;
+  border-radius: 14px;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  animation: fadeInCard 0.5s ease;
+}
+
+.event-card {
+  flex-direction: row;
+  padding: 16px;
+  min-height: 160px;
+}
+
+@media (max-width: 768px) {
+  .event-card {
+    flex-direction: column;
+  }
+}
+
+
+.event-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.event-icon {
+  font-size: 2.4rem;
+  color: #0f3f73;
+  padding-top: 5px;
+}
+
+.event-details {
+  flex: 1;
+}
+
+.event-details h3 {
+  margin-bottom: 10px;
+  font-size: 1.3em;
+  color: #04293A;
+}
+
+.event-details p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.cancel-btn {
+  display: inline-block;
+  margin-top: 12px;
+  background: #dc3545;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background-color: #b52b3b;
+}
+
+/* EMPTY STATE */
+.no-events {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.register-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #0f3f73;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: #0056b3;
+}
+
+/* ALERT BOX */
+.alert {
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.alert-success {
+  background-color: #d4f8e8;
+  color: #146c43;
+  border: 1px solid #b1e2cd;
+}
+
+.alert-error {
+  background-color: #fde2e2;
+  color: #8b0000;
+  border: 1px solid #f5b5b5;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInCard {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animated-title {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 1.5s ease-out forwards;
+}
+
+.loop-text {
+  display: inline-block;
+  animation: fadeLoop 4s ease-in-out infinite;
+  color: #00D1D1;
+  font-weight: bold;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLoop {
+  0%, 100% { opacity: 0; transform: translateY(5px); }
+  50% { opacity: 1; transform: translateY(0); }
+}
+
+/* FOOTER */
+footer {
+  background-color: #04293A;
+  color: white;
+  text-align: center;
+  padding: 40px;
+  margin-top: auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .event-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .event-icon {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 25px;
+  }
+}
+
+
+.register-cta {
+  text-align: center;
+  margin-top: 0px;
+}
+
+.register-cta .register-btn {
+  padding: 14px 30px;
+  font-size: 1rem;
+  background-color: #064663;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+.register-cta .register-btn:hover {
+  background-color: #0a5b85;
+}

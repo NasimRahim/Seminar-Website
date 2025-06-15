@@ -1,0 +1,152 @@
+/* addstyle.css — Admin Add Event Page Styling */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #f4fcff, #cdeffc);
+  color: #04293A;
+  margin: 0;
+}
+
+header {
+  background-color: #04293A;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+header h1 {
+  font-size: 2.4em;
+}
+
+nav {
+  background-color: #064663;
+  padding: 14px 25px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+nav a:hover {
+  background-color: #0a5b85;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 50px 30px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+section {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+section h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+form label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+form input,
+form textarea,
+form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+form button {
+  background-color: #04293A;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background-color: #064663;
+}
+
+footer {
+  background-color: #04293A;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  font-size: 0.9em;
+  margin-top: 40px;
+}
+
+/* Fade-in animation for entire heading */
+.animated-title {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Looping fade in/out animation for key text */
+.loop-text {
+  display: inline-block;
+  animation: fadeLoop 4s ease-in-out infinite;
+  color: #00D1D1;
+  font-weight: bold;
+}
+
+@keyframes fadeLoop {
+  0%, 100% { opacity: 0; transform: translateY(5px); }
+  50%      { opacity: 1; transform: translateY(0); }
+}
+
+.alert {
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  animation: fadeSlideIn 0.5s ease-out;
+}
+
+.alert-success {
+  background-color: #d4f8e8;
+  color: #146c43;
+  border: 1px solid #b1e2cd;
+}
+
+.alert-error {
+  background-color: #fde2e2;
+  color: #8b0000;
+  border: 1px solid #f5b5b5;
+}
